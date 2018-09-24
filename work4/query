@@ -1,0 +1,5 @@
+query:
+  SELECT * FROM "Courses" WHERE (
+    (SELECT COUNT(courses_id) FROM "Courses_Students") < (SELECT COUNT(*) FROM "Stundents"))
+  
+  Запрос как найти курсы на которые ходит меньше половины студентов
